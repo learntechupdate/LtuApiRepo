@@ -1,0 +1,64 @@
+algoshack.com
+
+1.create a request specification for a PUT call as a reusable method
+2. Response specification for put call
+3. given();
+4. when();
+5. Then()
+6. Method()		
+
+
+---------------------------
+parse the above json response and fetch the "price" where "idGear" is 2.
+{
+  "gear": [
+    {
+      "idGear": "1",
+      "name": "Nosilec za kolesa",
+      "year": "2005",
+      "price": "777.0"
+    }, {
+      "idGear": "2",
+      "name": "Stresni nosilci",
+      "year": "1983",
+      "price": "40.0"
+    }
+  ]
+}
+
+
+
+
+
+User id should be passed dynamically
+
+
+www.abc.com/userId/price
+www.abc.com/1/price
+
+
+
+
+
+
+
+-----
+public class Webservice{
+
+   public Response putApi(String url,String reqBodyinJsonStringFormat, Map<String,String> headers){
+   
+   Response response;
+   
+   RequestSepecification reqS=RestAssured.given();
+   
+   reqS.headers(headers);
+   
+   reqS.body(reqBodyinJsonStringFormat);
+   
+   response=reqS.put(url);
+   
+   return response;
+   
+   }
+
+}

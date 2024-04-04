@@ -1,0 +1,20 @@
+---------------
+Set variable dynamically in collection/local in test
+https://www.youtube.com/watch?v=5PM4gyE-ZWM
+
+
+pm.test("get token", function () {
+    var jsonData = pm.response.json();
+    console.log(jsonData.result.accessToken)
+    jsonData.result.accessToken;
+    pm.collectionVariables.set("token", jsonData.result.accessToken);
+});
+
+----------------------------------
+//concatinate and random number
+
+"returnNo": "S2023{{$randomBankAccount}}"
+
+-------
+
+

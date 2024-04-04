@@ -1,0 +1,12 @@
+url : https://www.google.com/
+testdata:
+  firstName: &name touheed
+  surname: aslam
+  address:
+    contactName : *name
+    hno: 455
+    pinCode : 560043
+    state : karnataka
+    city : bangalore
+
+
