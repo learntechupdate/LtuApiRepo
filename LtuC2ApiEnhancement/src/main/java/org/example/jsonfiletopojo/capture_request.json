@@ -1,0 +1,32 @@
+{
+  "intent": "AUTHORIZE updated",
+  "purchase_units": [
+    {
+      "items": [
+        {
+          "name": "Updated T-Shirt updated",
+          "description": "Blue XL updated",
+          "quantity": "1",
+          "unit_amount": {
+            "currency_code": "USD",
+            "value": "100.00"
+          }
+        }
+      ],
+      "amount": {
+        "currency_code": "USD",
+        "value": "150.00",
+        "breakdown": {
+          "item_total": {
+            "currency_code": "USD",
+            "value": "150.00"
+          }
+        }
+      }
+    }
+  ],
+  "application_context": {
+    "return_url": "https://example.com/updated_return",
+    "cancel_url": "https://example.com/updated_cancel"
+  }
+}

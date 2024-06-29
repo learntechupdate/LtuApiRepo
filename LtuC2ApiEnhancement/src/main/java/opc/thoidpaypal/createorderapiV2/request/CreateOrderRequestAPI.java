@@ -1,6 +1,5 @@
 package opc.thoidpaypal.createorderapiV2.request;
 
-import com.google.gson.Gson;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;

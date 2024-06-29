@@ -1,0 +1,25 @@
+{
+  "intent": "AUTHORIZE",
+  "purchase_units": [
+    {
+      "items": [
+        {
+          "name": "Updated T-Shirt",
+          "description": "Blue XL"
+        }
+      ],
+      "amount": {
+        "value": "120.00",
+        "breakdown": {
+          "item_total": {
+            "value": "120.00"
+          }
+        }
+      }
+    }
+  ],
+  "application_context": {
+    "return_url": "https://example.com/updated_return",
+    "cancel_url": "https://example.com/cancel"
+  }
+}

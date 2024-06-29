@@ -8,7 +8,7 @@ import opc.thoidpaypal.createorderapiV2.response.CreateOrderResponsePojo;
 import org.testng.annotations.Test;
 
 /**
- * The type Create order test api v 2 fixed.
+ * The type Create order Explanation.txt api v 2 fixed.
  */
 public class CreateOrderTestApiV2Fixed {
 

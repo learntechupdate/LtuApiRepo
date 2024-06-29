@@ -2,7 +2,6 @@ package xml.thoidtestdemo.shipmentstatusupdate.requestpojo;
 
 import lombok.Data;
 
-
 import javax.xml.bind.annotation.*;
 
 @Data
