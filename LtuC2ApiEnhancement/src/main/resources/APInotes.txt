@@ -18,3 +18,10 @@ pm.test("get token", function () {
 -------
 
 
+/**
+${NAME} class
+@author touheed.aslam#${USER}
+@since 4.8
+@version 4.8
+@updated ${DATE}
+*/

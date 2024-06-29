@@ -1,0 +1,5 @@
+Explanation:
+Parse JSON Files: Read and parse both capture_request.json and capture_requestNegativeTestData.json into JsonObjects.
+Merge JSON Objects: Recursively merge the two JsonObjects. If a key exists in both objects and the value is a nested object, merge the nested objects. If the key is a JSON array, merge the arrays element by element. Otherwise, add or update the key in the original object.
+Write Updated JSON to File: Convert the merged JsonObject back to a JSON string and write it back to the capture_request.json file.
+Print to Console: Print the updated JSON to the console for verification

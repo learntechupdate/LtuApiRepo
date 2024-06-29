@@ -1,7 +1,7 @@
 package xml.thoidtestdemo.shipmentstatusupdate;
-import xml.thoidtestdemo.shipmentstatusupdate.requestpojo.ShipmentStatusAudit;
 
 import xml.thoidtestdemo.shipmentstatusupdate.requestpojo.Shipment;
+import xml.thoidtestdemo.shipmentstatusupdate.requestpojo.ShipmentStatusAudit;
 
 public class ShipmentStatusBuilder {
 
