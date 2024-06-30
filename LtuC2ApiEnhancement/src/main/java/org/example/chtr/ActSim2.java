@@ -29,9 +29,11 @@ public class ActSim2 {
             // Update update Default Values values
             Map<String ,String> attribueUpdate=new HashMap<>();
             attribueUpdate.put("serviceId","bescom");
-            attribueUpdate.put("requestType","hana");
-            attribueUpdate.put("zipCode","560043");
-            attribueUpdate.put("featureCode","featureCode1");
+//            attribueUpdate.put("requestType","hana");
+//            attribueUpdate.put("zipCode","560043");
+            attribueUpdate.put("featureCode","featureCodeNew");
+            attribueUpdate.put("deviceId:Array#0:type", "IMEI2New");
+            attribueUpdate.put("feature:Array#1:featureCode", "HeyFeature");
             updateDefaultValues(jsonObject,attribueUpdate);
 
             // Write the updated JSON object back to the file (optional)
@@ -51,7 +53,7 @@ public class ActSim2 {
 
     private static void updateDefaultValues(JsonElement element,Map<String ,String> attribueUpdate) {
 
-
+       String JsonElementCustom= String.valueOf(element);
         if (element.isJsonObject()) {
             JsonObject jsonObject = element.getAsJsonObject();
             for (Entry<String, JsonElement> entry : jsonObject.entrySet()) {
@@ -60,6 +62,25 @@ public class ActSim2 {
                     if(attribueUpdate.containsKey(entry.getKey())) {
                         jsonObject.addProperty(entry.getKey(),attribueUpdate.get(entry.getKey()) );
                     }
+
+//                    attribueUpdate.put("deviceId:Array#0:type", "IMEI2New");
+//                    attribueUpdate.put("feature:Array#1:featureCode", "HeyFeature");
+                    /*if (attribueUpdate.containsKey("deviceId:Array#0:type")) {
+
+                        String[] parts = "deviceId:Array#0:type".split(":");
+                        String keyInput = parts[0];
+                        String ArrayIndex = parts[1].split("#")[1];
+                        String keyValueInput = parts[2];
+
+                        attribueUpdate.containsKey("keyInput");
+                      *//*  // Construct the updated key and value
+                        String updatedKey = keyInput;
+                        String updatedValue = keyValueInput;
+                        // Put the update into the updates map
+                        updates.put(updatedKey, attribueUpdate.get(key));*//*
+                        updateDefaultValues(entry.getValue(),attribueUpdate);
+                    }*/
+
                 }
                 else {
                     // Recursively update nested objects and arrays

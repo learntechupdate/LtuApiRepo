@@ -71,8 +71,34 @@ public class ActSim3 {
         } else if (element.isJsonArray()) {
             JsonArray jsonArray = element.getAsJsonArray();
             for (JsonElement arrayElement : jsonArray) {
-                updateDefaultValues(arrayElement,attribueUpdate);
-//                arrayElement
+
+//                for (String key : attribueUpdate.keySet()) {
+                    if (arrayElement.getAsString().contains("Array")) {
+                        String[] parts = arrayElement.getAsString().split(":");
+                        String keyInput = parts[0];
+                        String ArrayIndex = parts[1].split("#")[1];
+                        String keyValueInput = parts[2];
+                      /*  // Construct the updated key and value
+                        String updatedKey = keyInput;
+                        String updatedValue = keyValueInput;
+                        // Put the update into the updates map
+                        updates.put(updatedKey, attribueUpdate.get(key));*/
+
+//                }
+
+//                JsonArray subOrderArray = jsonObject.get("data").getAsJsonObject().getAsJsonArray("subOrder");
+//                System.out.println("subOrderArray"+subOrderArray);
+                        JsonElement arrayElement2 = null;
+                        int j = Integer.parseInt(ArrayIndex);
+                        for (int i = 0; i < jsonArray.size(); i++) {
+                             arrayElement2 = jsonArray.get(i).getAsJsonObject()
+                                    .getAsJsonArray(keyInput).get(j).getAsJsonObject().get(keyValueInput);
+                            System.out.println("el" + arrayElement2);
+                        }
+                        //                arrayElement
+                        updateDefaultValues(arrayElement2,attribueUpdate);
+                    }
+
             }
         }
     }
